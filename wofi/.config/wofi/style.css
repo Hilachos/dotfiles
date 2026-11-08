@@ -1,0 +1,39 @@
+/* ===== Tokyo Night Moon ===== */
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 14px;
+}
+
+window {
+  background-color: #222436;
+  border: 2px solid #82aaff;
+  border-radius: 12px;
+}
+
+#input {
+  margin: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2f334d;
+  color: #c8d3f5;
+}
+
+#outer-box { padding: 6px; }
+
+#entry {
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: #c8d3f5;
+}
+
+#entry:selected {
+  background-color: #82aaff;
+}
+
+#entry:selected #text {
+  color: #222436;
+  font-weight: bold;
+}
+
+#text { color: #c8d3f5; }

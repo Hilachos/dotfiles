@@ -1,0 +1,49 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 34,
+  "margin-top": 6,
+  "margin-left": 10,
+  "margin-right": 10,
+  "spacing": 6,
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["network", "pulseaudio", "battery", "tray"],
+
+  "hyprland/workspaces": {
+    "format": "{id}",
+    "on-click": "activate"
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%A %d %B %Y}",
+    "tooltip-format": "<tt>{calendar}</tt>"
+  },
+
+  "network": {
+    "format-wifi": "󰤨  {essid}",
+    "format-ethernet": "󰈀  cable",
+    "format-disconnected": "󰤭  sin red",
+    "tooltip-format": "{ifname} · {ipaddr} · {signalStrength}%",
+    "on-click": "kitty -e nmtui"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "󰝟  mute",
+    "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "scroll-step": 5
+  },
+
+  "battery": {
+    "states": { "warning": 30, "critical": 15 },
+    "format": "{icon}  {capacity}%",
+    "format-charging": "󰂄  {capacity}%",
+    "format-icons": ["󰂎", "󰁻", "󰁽", "󰁿", "󰂁", "󰁹"]
+  },
+
+  "tray": { "spacing": 8 }
+}

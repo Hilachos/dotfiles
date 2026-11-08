@@ -1,0 +1,50 @@
+/* ===== Tokyo Night Moon ===== */
+@define-color bg      #222436;
+@define-color surface #2f334d;
+@define-color fg      #c8d3f5;
+@define-color blue    #82aaff;
+@define-color purple  #c099ff;
+@define-color green   #c3e88d;
+@define-color orange  #ff966c;
+@define-color red     #ff757f;
+
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 14px;
+  border: none;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+  color: @fg;
+}
+
+/* Cada módulo es una "pastilla" redondeada */
+#workspaces, #clock, #network, #pulseaudio, #battery, #tray {
+  background: @bg;
+  border-radius: 12px;
+  padding: 0 14px;
+  margin: 2px 0;
+}
+
+#workspaces { padding: 0 6px; }
+#workspaces button {
+  color: @fg;
+  padding: 0 8px;
+  border-radius: 10px;
+}
+#workspaces button.active {
+  background: @blue;
+  color: @bg;
+}
+#workspaces button:hover { background: @surface; }
+
+#clock      { color: @purple; font-weight: bold; }
+#network    { color: @blue; }
+#pulseaudio { color: @purple; }
+#battery    { color: @green; }
+#battery.charging { color: @green; }
+#battery.warning:not(.charging)  { color: @orange; }
+#battery.critical:not(.charging) { color: @red; }
+#network.disconnected, #pulseaudio.muted { color: @red; }

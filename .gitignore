@@ -1,0 +1,16 @@
+# Nunca subir secretos ni claves
+.ssh/
+*.key
+*.pem
+*secret*
+*token*
+
+# Basura de editores y copias
+*.bak
+*.swp
+*~
+
+# Imágenes (derechos de autor de los fondos)
+*.jpg
+*.jpeg
+*.png
