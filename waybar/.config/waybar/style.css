@@ -48,3 +48,4 @@ window#waybar {
 #battery.warning:not(.charging)  { color: @orange; }
 #battery.critical:not(.charging) { color: @red; }
 #network.disconnected, #pulseaudio.muted { color: @red; }
+#power-profiles-daemon { background: @bg; border-radius: 12px; padding: 0 14px; margin: 2px 0; color: @orange; }
