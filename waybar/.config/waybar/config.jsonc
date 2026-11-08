@@ -9,7 +9,7 @@
 
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["network", "pulseaudio", "battery", "tray"],
+  "modules-right": ["network", "pulseaudio", "power-profiles-daemon", "battery", "tray"],
 
   "hyprland/workspaces": {
     "format": "{id}",
@@ -43,6 +43,11 @@
     "format": "{icon}  {capacity}%",
     "format-charging": "󰂄  {capacity}%",
     "format-icons": ["󰂎", "󰁻", "󰁽", "󰁿", "󰂁", "󰁹"]
+  },
+
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "format-icons": { "performance": "󰓅", "balanced": "󰾅", "power-saver": "󰾆" }
   },
 
   "tray": { "spacing": 8 }
